@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;1,300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", serif;
+}
+
+p {
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  background: #151516;
+}
+
+* {
+  color: #fff;
+}
+
+main {
+  padding-left: 102px;
+}
+
+#sidebar {
+  position: fixed;
+  height: 100vh;
+  padding-right: 39px;
+  padding-left: 39px;
+  display: flex;
+  flex-direction: column;
+}
+#sidebar .logo {
+  height: 20%;
+  padding-top: 62%;
+  text-align: center;
+}
+#sidebar nav {
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#sidebar nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#sidebar nav ul li {
+  position: relative;
+  margin-bottom: 35px;
+}
+#sidebar nav ul li a:hover i {
+  color: #fff;
+}
+#sidebar nav ul li a:hover + span {
+  opacity: 1;
+  left: 30px;
+}
+#sidebar nav ul li a i {
+  font-size: 18px;
+  color: #B6B7BA;
+}
+#sidebar nav ul li span {
+  position: absolute;
+  white-space: nowrap;
+  left: 20px;
+  padding: 7px 13px;
+  background: rgba(30, 30, 32, 0.75);
+  border-radius: 6px;
+  top: -8px;
+  opacity: 0;
+  transition: 0.3s;
+}
+#sidebar .toggle-mode {
+  height: 20%;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 62px;
+}
+#sidebar .toggle-mode .outer {
+  width: 24px;
+  height: 35px;
+  background: #1E1E20;
+  border-radius: 24px;
+}
+#sidebar .toggle-mode .outer .inner {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  background: #658DF2;
+  border-radius: 50%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 16px;
+}
+#sidebar .toggle-mode .outer .inner::before {
+  position: absolute;
+  content: " ";
+  width: 14px;
+  height: 14px;
+  background: #1E1E20;
+  top: -4px;
+  left: 3px;
+  border-radius: 50%;
+}
+
+#home {
+  background: #f00;
+}
+
+#project {
+  background: #f00;
+}
+
+#contacts {
+  background: #000;
+}/*# sourceMappingURL=main.css.map */
