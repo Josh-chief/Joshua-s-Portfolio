@@ -25,6 +25,12 @@ body {
 main {
   padding-left: 102px;
 }
+main > section {
+  display: none;
+}
+main > section.active {
+  display: block;
+}
 
 #sidebar {
   position: fixed;
@@ -61,9 +67,30 @@ main {
   opacity: 1;
   left: 30px;
 }
+#sidebar nav ul li a:before {
+  content: "";
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #658DF2;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 0.3s;
+}
+#sidebar nav ul li a.active:before {
+  opacity: 0.15;
+  transform: translate(-50%, -50%) scale(1);
+}
+#sidebar nav ul li a.active i {
+  color: #658DF2;
+}
 #sidebar nav ul li a i {
   font-size: 18px;
   color: #B6B7BA;
+  transition: all 0.3s;
 }
 #sidebar nav ul li span {
   position: absolute;
@@ -110,7 +137,7 @@ main {
 }
 
 #home {
-  background: #f00;
+  background: #B6B7BA;
 }
 
 #project {
