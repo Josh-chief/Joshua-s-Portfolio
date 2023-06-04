@@ -1,7 +1,7 @@
-.btn-custom-blue{
+.btn-custom-blue {
     display: inline-block;
     position: relative;
-    background-color: #262F48 ;
+    background: #262F48;
     padding: 10px 52px;
     text-decoration: none;
     color: $primary;
@@ -10,13 +10,13 @@
     overflow: hidden;
     transition: all 0.3s;
 
-    &::before{
-        content:"";
+    &:before {
+        content: "";
         position: absolute;
         width: 100px;
         height: 100px;
         background: $primary;
-        opacity:0.3;
+        opacity: 0.3;
         border-radius: 50%;
         top: 50%;
         left: 50%;
@@ -25,13 +25,16 @@
         transition: all 0.3s;
     }
 
-    &:hover{
+    &:hover {
         color: #fff;
 
-        &:before{
-            
-        transform: translate(-50%, -50%) scale(2);
-
+        &:before {
+            transform: translate(-50%, -50%) scale(2);
+        }
     }
 }
-}
+
+.btn-custom-dark {
+    @extend .btn-custom-blue;
+    background: $secondary;
+} 
