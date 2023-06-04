@@ -1,42 +1,59 @@
-#sidebar{
-    position:fixed;
-     height:100vh;
+#sidebar {
+    position: fixed;
+    height: 100vh;
     padding-right: 39px;
     padding-left: 39px;
     display: flex;
     flex-direction: column;
 
-    .logo{
+    .toggle-sidebar {
+        position: absolute;
+        font-size: 30px;
+        width: 45px;
+        height: 45px;
+        background: darken($secondary, 30%);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        right: -45px;
+    }
+
+    .logo {
         height: 20%;
-        padding-top:62%;
+        padding-top: 62px;
         text-align: center;
     }
+
     nav {
         height: 60%;
         display: flex;
         align-items: center;
         justify-content: center;
-        ul{
+
+        ul {
             list-style: none;
             margin: 0;
             padding: 0;
 
-            li{
+            li {
                 position: relative;
                 margin-bottom: 35px;
 
-                a{
+                a {
+                    position: relative;
 
-                    &:hover{
-                        i{
-                            color:#fff;
+                    &:hover {
+                        i {
+                            color: #fff;
                         }
-                        + span{
-                         opacity: 1;
-                         left: 30px;
+
+                        +span {
+                            opacity: 1;
+                            left: 30px;
                         }
-                    }  
-                    &:before{
+                    }
+
+                    &:before {
                         content: "";
                         position: absolute;
                         width: 46px;
@@ -44,78 +61,82 @@
                         border-radius: 50%;
                         background: $primary;
                         opacity: 0;
-                        top:50%;
-                        left:50%;
+                        top: 50%;
+                        left: 50%;
                         transform: translate(-50%, -50%) scale(0);
-                        transition:all 0.3s;
+                        transition: all 0.3s;
                     }
-                    &.active{
-                        &:before{
+
+                    &.active {
+                        &:before {
                             opacity: 0.15;
                             transform: translate(-50%, -50%) scale(1);
+                        }
 
+                        i {
+                            color: $primary;
                         }
-                        i{
-                            color: $primary; 
-                        }
-                        
                     }
 
-                    i{
+                    span {
+                        display: none;
+                    }
+
+                    i {
                         font-size: 18px;
-                        color:$gray;
+                        color: $gray;
                         transition: all 0.3s;
-
                     }
-
                 }
-                span{
-                    position: absolute ;
+
+                > span {
+                    position: absolute;
                     white-space: nowrap;
-                    left: 20px;
-                    padding:7px 13px ;
-                    background: rgba($secondary, 0.75);
-                    border-radius:6px;
                     top: -8px;
+                    left: 20px;
+                    padding: 7px 13px;
+                    background: rgba($secondary, 0.75);
+                    border-radius: 6px;
                     opacity: 0;
-                    transition: 0.3s;
+                    transition: all 0.3s;
                 }
             }
         }
     }
-    .toggle-mode{
+
+    .toggle-mode {
         height: 20%;
-        display:flex;
+        display: flex;
         align-items: flex-end;
         padding-bottom: 62px;
 
-        .outer{
+        .outer {
             width: 24px;
             height: 35px;
             background: $secondary;
             border-radius: 24px;
 
-            .inner{
+            .inner {
                 position: relative;
                 width: 14px;
                 height: 14px;
-                background:$primary;
+                background: $primary;
                 border-radius: 50%;
                 margin-right: auto;
                 margin-left: auto;
                 margin-top: 16px;
 
-                &::before{
+                &:before {
                     position: absolute;
-                    content: " ";
+                    content: "";
                     width: 14px;
                     height: 14px;
-                    background:$secondary;
+                    background: $secondary;
                     top: -4px;
                     left: 3px;
-                    border-radius: 50%
+                    border-radius: 50%;
                 }
             }
         }
     }
-}  
+}

@@ -40,9 +40,20 @@ main > section.active {
   display: flex;
   flex-direction: column;
 }
+#sidebar .toggle-sidebar {
+  position: absolute;
+  font-size: 30px;
+  width: 45px;
+  height: 45px;
+  background: black;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  right: -45px;
+}
 #sidebar .logo {
   height: 20%;
-  padding-top: 62%;
+  padding-top: 62px;
   text-align: center;
 }
 #sidebar nav {
@@ -59,6 +70,9 @@ main > section.active {
 #sidebar nav ul li {
   position: relative;
   margin-bottom: 35px;
+}
+#sidebar nav ul li a {
+  position: relative;
 }
 #sidebar nav ul li a:hover i {
   color: #fff;
@@ -87,21 +101,24 @@ main > section.active {
 #sidebar nav ul li a.active i {
   color: #658DF2;
 }
+#sidebar nav ul li a span {
+  display: none;
+}
 #sidebar nav ul li a i {
   font-size: 18px;
   color: #B6B7BA;
   transition: all 0.3s;
 }
-#sidebar nav ul li span {
+#sidebar nav ul li > span {
   position: absolute;
   white-space: nowrap;
+  top: -8px;
   left: 20px;
   padding: 7px 13px;
   background: rgba(30, 30, 32, 0.75);
   border-radius: 6px;
-  top: -8px;
   opacity: 0;
-  transition: 0.3s;
+  transition: all 0.3s;
 }
 #sidebar .toggle-mode {
   height: 20%;
@@ -125,9 +142,9 @@ main > section.active {
   margin-left: auto;
   margin-top: 16px;
 }
-#sidebar .toggle-mode .outer .inner::before {
+#sidebar .toggle-mode .outer .inner:before {
   position: absolute;
-  content: " ";
+  content: "";
   width: 14px;
   height: 14px;
   background: #1E1E20;
@@ -146,4 +163,38 @@ main > section.active {
 
 #contacts {
   background: #000;
+}
+
+@media (max-width: 768px) {
+  #sidebar {
+    background: black;
+    padding-right: 60px;
+    transform: translateX(-100%);
+    transition: all 0.3s;
+  }
+  #sidebar.open {
+    transform: translateX(0);
+  }
+  #sidebar .toggle-sidebar {
+    display: flex;
+  }
+  #sidebar .logo {
+    text-align: left;
+  }
+  #sidebar nav ul li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  #sidebar nav ul li a span {
+    display: block;
+    padding-left: 8px;
+  }
+  #sidebar nav ul li > span {
+    display: none;
+  }
+  main {
+    padding-left: 0;
+    padding-top: 50px;
+  }
 }/*# sourceMappingURL=main.css.map */
