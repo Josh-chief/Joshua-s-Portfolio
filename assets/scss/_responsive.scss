@@ -1,4 +1,16 @@
-@media (max-width: 768px) {
+@media (max-width: 991px){
+    #home {
+        .image{
+            justify-content: flex-start;
+            height: unset;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+    }
+ 
+}
+
+@media (max-width: 767px) {
     #sidebar {
         background: darken($secondary, 30%);
         padding-right: 60px;
@@ -34,9 +46,34 @@
             }
         }
     }
+    h1{
+        font-size: 36px;
+    }
+    h2{
+        font-size: 20px;
+    }
 
     main {
         padding-left: 0;
         padding-top: 50px;
+
+        >section{
+            padding-right: 32px;
+            padding-left: 32px;
+        }
+
+    }
+    #home{
+        background-image: unset;
+        .info{
+            padding-top: 80px;
+
+        .socials{
+            margin-top: 70px;
+            ul{
+                justify-content: space-between;
+            }
+        }
+        }
     }
 }

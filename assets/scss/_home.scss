@@ -1,3 +1,141 @@
 #home{
-    background: $gray;
+    background-image: url('../images/bg-shape.png');
+    background-repeat: no-repeat;
+    background-position: 40vw -24px;
+    .info{
+        padding-top: 281px;
+
+        img.person-circle {
+            margin-bottom: 24px;
+        } 
+
+        h1 {
+            margin-bottom: 24px;
+
+            span{
+                color: $gray; 
+            }
+        }
+        .field{
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+
+        h2 {
+            color: $gray;
+            margin: 0;
+            
+        }
+        span{
+            font-size: 21px;
+            margin-left: 2px;
+        }
+    }
+
+        p{
+            max-width: 430px;
+            margin-bottom: 74px;
+        }
+        .socials{
+            margin-top: 191px;
+
+            ul{
+                display: flex;
+                flex-wrap: wrap;
+                list-style: none;
+                li{
+                    margin-right: 8px;
+                }
+                a{
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none;
+                    padding: 9px 11px;
+                    transition: all 0.3s;
+
+                    &:hover{
+                        background:$secondary;
+                        border-radius: 6px;
+                        span,i{
+                            color: #fff;
+                        }
+                    }
+                } 
+                
+                i{
+                    font-size: 18px;
+                    margin-right: 8px;
+                    color: $gray;
+                    transition: all 0.3s;
+
+                }
+                span{
+                    color: $secondary_gray;
+                    transition: all 0.3s;
+
+                }
+                 
+            }
+        }
+    }
+
+    .image {
+         height:100vh;
+         display: flex;
+         align-items: center;
+         justify-content:flex-end;
+
+         img{
+            border-radius:8px ;
+            max-width: 100%;
+            transition: all 0.3s;
+
+            &:hover{
+                filter: saturate(200%) sepia(1);
+            }
+         }
+
+    }
+    .meteor-shower{
+        position:absolute;
+        width: 100%;
+        height: 100vh;
+        right: 0;
+        top:0;
+        overflow: hidden;
+        z-index: -1;
+
+
+        @for $i from 1 through 15 {
+
+            .meteor:nth-child(#{$i}){
+                position:absolute;
+                background-image: url('../images/meteor.png');
+                width: 69px;
+                height: 49px;
+                opacity: 0;
+                top: 100px;
+                top: #{random(80) + 'vh'};
+                left: #{random(80) + 'vw'};
+                animation: meteor #{random(5000) + 3000 +'ms'} linear infinite;
+                animation-delay: #{random(5000)+'ms'};
+            }
+
+    
+        }
+        
+
+    }
+}
+
+@keyframes meteor {
+    0% {
+        transform: translate(300px, -300px);
+        opacity: 1;
+    }
+    15%{
+        transform: translate(-300px, 300px);
+        opacity: 0;
+
+    }
 }

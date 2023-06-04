@@ -13,3 +13,19 @@ navLinks.forEach((item) => {
 document.querySelector('#sidebar .toggle-sidebar').addEventListener('click', function(){
     document.querySelector('#sidebar').classList.toggle('open')
 })
+
+var options = {
+    strings: ['Mobile Application Developer', 'Back-End web developer', 'App designer'],
+    loop: true,
+    typeSpeed: 70,
+    backSpeed: 10
+  };
+  
+  new Typed('.field h2', options);
+
+
+  for(let i=1; i<=15; i++){
+    let meteor = document.createElement('span');
+    meteor.classList = 'meteor'
+    document.querySelector('#home .meteor-shower').append(meteor);
+  } 
