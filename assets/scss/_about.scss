@@ -53,4 +53,169 @@
             }
         }
     }
+
+    header.custom{
+        position: relative;
+        text-align: center;
+
+        &:before{
+            content: "";
+            position: absolute;
+            width: 	100%;
+            height: 2px;
+            background: $secondary;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: -1;
+        }
+        h2{
+            display: inline-block;
+            padding: 0 24px;
+            background: $dark_bg;
+        }
+    }
+
+    .rate{
+        display: flex;
+        span{
+            position: relative;
+            display: flex;
+            width: 15px;
+            height: 15px;
+
+            &:not(:last-child){
+                margin-right: 12px;
+            }
+            &:before{
+                position:absolute;
+                content: "";
+                width: 15px;
+                height: 15px;
+                border-radius: 4px;
+                background: $primary;
+                transform: rotate(40deg);
+            }
+            &:after{
+                position: absolute;
+                content: "";
+                width: 15px;
+                height: 15px;
+                border-radius: 4px;
+                background: $primary;
+                transform: rotate(50deg);
+            }
+        }
+    }
+
+
+    .languages-skills{
+        margin-top: 126px;
+
+
+        .languages-key-skills{
+            padding-right: 160px; 
+            .languages{
+                .items{
+                    .item{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-top: 38px;
+                        margin-bottom: 43px;	
+
+                        &:not(:last-child){
+                            margin-bottom: 16px;
+                        }
+
+                        .info{
+                            h3{
+                               margin-bottom: 4px; 
+                            }
+                            .level{
+                                color: $gray;
+                            }
+                        }
+                    }
+                }
+            }
+            .key-skills{
+                .items{
+                    margin-top: 53px;
+                   .item{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    &:not(:last-child){
+                        margin-bottom: 32px 8px;
+                    }
+                   } 
+                }
+            }
+        }
+        .web-skills {
+            .items{
+                margin-top: 42px;
+                margin-left: -20px;
+                margin-right: -20px;
+                .item{
+                    position: relative;
+                    padding: 32px 8px;
+                    text-align: center;
+                    background: $secondary;
+                    margin-bottom: 16px;
+                    border-radius: 8px;
+                    z-index: 1;
+                    overflow: hidden;
+
+                   &:hover{
+                    &:before,
+                    &:after{
+                        transform: translate(0, 0);
+                    }
+                   }
+                   
+                    &:before{
+                        position: absolute;
+                        content: ""; 
+                        width: 100%;
+                        height: 100%;
+                        background: darken($primary,40%);
+                        left: 0;
+                        top: 0;
+                        border-radius: 8px;
+                        z-index: -1;
+                        transform: translate(100%, -100%);
+                        transition: all 0.6s;
+                    }
+                    &:after{
+                        position: absolute;
+                        content: ""; 
+                        width: 100%;
+                        height: 100%;
+                        background: darken($primary,40%);
+                        left: 0;
+                        top: 0;
+                        border-radius: 8px;
+                        z-index: -1;
+                        transform: translate(-100%, 100%);
+                        transition: all 0.6s;
+                    }
+                   
+                    img{
+                    
+                        margin-bottom: 21px;
+                    }
+                    h3{
+                        margin-bottom: 8px;
+                    }
+                    .year{
+                        color:#FF9F76;
+                    }
+                }
+            }
+            
+        } 
 }
+} 
