@@ -12,7 +12,7 @@ ul {
   list-style: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   padding: 0;
 }
@@ -66,11 +66,33 @@ main > section.active {
 }
 main > section header.has-bg {
   position: relative;
+  display: inline-flex;
 }
 main > section header.has-bg img {
   position: absolute;
   top: 15px;
   left: -72px;
+}
+main header.custom {
+  position: relative;
+  text-align: center;
+  margin-bottom: 42px;
+}
+main header.custom:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #1E1E20;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+main header.custom h2 {
+  display: inline-block;
+  padding: 0 24px;
+  background: #151516;
 }
 
 .btn-custom-blue, .btn-custom-dark {
@@ -331,10 +353,10 @@ main > section header.has-bg img {
   height: 49px;
   opacity: 0;
   top: 100px;
-  top: 6vh;
-  left: 18vw;
-  animation: meteor 4655ms linear infinite;
-  animation-delay: 3828ms;
+  top: 28vh;
+  left: 6vw;
+  animation: meteor 4151ms linear infinite;
+  animation-delay: 1719ms;
 }
 #home .meteor-shower .meteor:nth-child(2) {
   position: absolute;
@@ -343,10 +365,10 @@ main > section header.has-bg img {
   height: 49px;
   opacity: 0;
   top: 100px;
-  top: 52vh;
-  left: 59vw;
-  animation: meteor 5503ms linear infinite;
-  animation-delay: 1632ms;
+  top: 76vh;
+  left: 64vw;
+  animation: meteor 5237ms linear infinite;
+  animation-delay: 2129ms;
 }
 #home .meteor-shower .meteor:nth-child(3) {
   position: absolute;
@@ -355,10 +377,10 @@ main > section header.has-bg img {
   height: 49px;
   opacity: 0;
   top: 100px;
-  top: 28vh;
-  left: 39vw;
-  animation: meteor 4896ms linear infinite;
-  animation-delay: 1232ms;
+  top: 64vh;
+  left: 36vw;
+  animation: meteor 4577ms linear infinite;
+  animation-delay: 3970ms;
 }
 #home .meteor-shower .meteor:nth-child(4) {
   position: absolute;
@@ -367,10 +389,10 @@ main > section header.has-bg img {
   height: 49px;
   opacity: 0;
   top: 100px;
-  top: 46vh;
-  left: 24vw;
-  animation: meteor 3383ms linear infinite;
-  animation-delay: 310ms;
+  top: 62vh;
+  left: 77vw;
+  animation: meteor 3340ms linear infinite;
+  animation-delay: 4792ms;
 }
 #home .meteor-shower .meteor:nth-child(5) {
   position: absolute;
@@ -379,10 +401,10 @@ main > section header.has-bg img {
   height: 49px;
   opacity: 0;
   top: 100px;
-  top: 60vh;
-  left: 11vw;
-  animation: meteor 7161ms linear infinite;
-  animation-delay: 172ms;
+  top: 77vh;
+  left: 25vw;
+  animation: meteor 6345ms linear infinite;
+  animation-delay: 4674ms;
 }
 #home .meteor-shower .meteor:nth-child(6) {
   position: absolute;
@@ -391,10 +413,10 @@ main > section header.has-bg img {
   height: 49px;
   opacity: 0;
   top: 100px;
-  top: 34vh;
-  left: 55vw;
-  animation: meteor 7406ms linear infinite;
-  animation-delay: 4483ms;
+  top: 52vh;
+  left: 14vw;
+  animation: meteor 5479ms linear infinite;
+  animation-delay: 2221ms;
 }
 #home .meteor-shower .meteor:nth-child(7) {
   position: absolute;
@@ -403,10 +425,10 @@ main > section header.has-bg img {
   height: 49px;
   opacity: 0;
   top: 100px;
-  top: 38vh;
-  left: 55vw;
-  animation: meteor 7957ms linear infinite;
-  animation-delay: 2387ms;
+  top: 59vh;
+  left: 34vw;
+  animation: meteor 7042ms linear infinite;
+  animation-delay: 4434ms;
 }
 #home .meteor-shower .meteor:nth-child(8) {
   position: absolute;
@@ -415,10 +437,10 @@ main > section header.has-bg img {
   height: 49px;
   opacity: 0;
   top: 100px;
-  top: 8vh;
-  left: 68vw;
-  animation: meteor 6056ms linear infinite;
-  animation-delay: 746ms;
+  top: 67vh;
+  left: 23vw;
+  animation: meteor 4788ms linear infinite;
+  animation-delay: 2569ms;
 }
 #home .meteor-shower .meteor:nth-child(9) {
   position: absolute;
@@ -427,10 +449,10 @@ main > section header.has-bg img {
   height: 49px;
   opacity: 0;
   top: 100px;
-  top: 68vh;
-  left: 80vw;
-  animation: meteor 6407ms linear infinite;
-  animation-delay: 182ms;
+  top: 20vh;
+  left: 79vw;
+  animation: meteor 4193ms linear infinite;
+  animation-delay: 3228ms;
 }
 #home .meteor-shower .meteor:nth-child(10) {
   position: absolute;
@@ -439,10 +461,10 @@ main > section header.has-bg img {
   height: 49px;
   opacity: 0;
   top: 100px;
-  top: 1vh;
-  left: 51vw;
-  animation: meteor 4570ms linear infinite;
-  animation-delay: 4294ms;
+  top: 25vh;
+  left: 43vw;
+  animation: meteor 4065ms linear infinite;
+  animation-delay: 64ms;
 }
 #home .meteor-shower .meteor:nth-child(11) {
   position: absolute;
@@ -451,10 +473,10 @@ main > section header.has-bg img {
   height: 49px;
   opacity: 0;
   top: 100px;
-  top: 10vh;
-  left: 53vw;
-  animation: meteor 4251ms linear infinite;
-  animation-delay: 4554ms;
+  top: 75vh;
+  left: 50vw;
+  animation: meteor 4278ms linear infinite;
+  animation-delay: 4489ms;
 }
 #home .meteor-shower .meteor:nth-child(12) {
   position: absolute;
@@ -463,10 +485,10 @@ main > section header.has-bg img {
   height: 49px;
   opacity: 0;
   top: 100px;
-  top: 67vh;
-  left: 52vw;
-  animation: meteor 3672ms linear infinite;
-  animation-delay: 3029ms;
+  top: 4vh;
+  left: 65vw;
+  animation: meteor 5790ms linear infinite;
+  animation-delay: 4730ms;
 }
 #home .meteor-shower .meteor:nth-child(13) {
   position: absolute;
@@ -475,10 +497,10 @@ main > section header.has-bg img {
   height: 49px;
   opacity: 0;
   top: 100px;
-  top: 78vh;
-  left: 32vw;
-  animation: meteor 7856ms linear infinite;
-  animation-delay: 1645ms;
+  top: 73vh;
+  left: 16vw;
+  animation: meteor 6848ms linear infinite;
+  animation-delay: 1454ms;
 }
 #home .meteor-shower .meteor:nth-child(14) {
   position: absolute;
@@ -487,10 +509,10 @@ main > section header.has-bg img {
   height: 49px;
   opacity: 0;
   top: 100px;
-  top: 39vh;
-  left: 5vw;
-  animation: meteor 4591ms linear infinite;
-  animation-delay: 4600ms;
+  top: 40vh;
+  left: 24vw;
+  animation: meteor 7947ms linear infinite;
+  animation-delay: 89ms;
 }
 #home .meteor-shower .meteor:nth-child(15) {
   position: absolute;
@@ -499,10 +521,10 @@ main > section header.has-bg img {
   height: 49px;
   opacity: 0;
   top: 100px;
-  top: 71vh;
-  left: 19vw;
-  animation: meteor 7744ms linear infinite;
-  animation-delay: 2801ms;
+  top: 41vh;
+  left: 67vw;
+  animation: meteor 3683ms linear infinite;
+  animation-delay: 1926ms;
 }
 
 @keyframes meteor {
@@ -553,27 +575,6 @@ main > section header.has-bg img {
 }
 #about .hero .info .buttons a:first-child {
   margin-right: 24px;
-}
-#about header.custom {
-  position: relative;
-  text-align: center;
-  margin-bottom: 42px;
-}
-#about header.custom:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background: #1E1E20;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: -1;
-}
-#about header.custom h2 {
-  display: inline-block;
-  padding: 0 24px;
-  background: #151516;
 }
 #about .rate {
   display: flex;
@@ -696,6 +697,116 @@ main > section header.has-bg img {
   width: 100%;
 }
 
+#resume {
+  padding-bottom: 155px;
+  background-image: url(../images/bg-shape.png);
+  background-repeat: no-repeat;
+  background-position: 40vw 374px;
+}
+#resume header.has-bg {
+  margin-bottom: 64px;
+}
+#resume .items .item {
+  display: flex;
+}
+#resume .items .item:not(:last-child) {
+  margin-bottom: 42px;
+}
+#resume .items .item.last .icon i,
+#resume .items .item.last .box .title {
+  color: #658DF2;
+}
+#resume .items .item:hover .icon,
+#resume .items .item:hover .icon:before {
+  background: rgba(11, 44, 128, 0.4);
+}
+#resume .items .item:hover .box {
+  background: transparent;
+}
+#resume .items .item:hover .box:before {
+  border-right-color: rgba(11, 44, 128, 0.4);
+}
+#resume .items .item:hover .box:after {
+  width: 100%;
+}
+#resume .items .item .icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.0509803922);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  font-size: 18px;
+  margin-right: 46px;
+  margin-top: 23px;
+  transition: all 0.3s;
+}
+#resume .items .item .icon:before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 126px;
+  background: #1E1E20;
+  top: 78px;
+  transition: all 0.3s;
+}
+#resume .items .item .box {
+  position: relative;
+  padding: 32px;
+  background: rgba(30, 30, 32, 0.75);
+  border-radius: 8px;
+  text-align: left;
+  z-index: 1;
+  flex-grow: 1;
+  transition: all 0.3s;
+}
+#resume .items .item .box:before {
+  content: "";
+  position: absolute;
+  border-right: 9px solid rgba(30, 30, 32, 0.75);
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  left: -9px;
+  top: 36px;
+  z-index: 1;
+  transition: all 0.3s;
+}
+#resume .items .item .box:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 8px;
+  background: rgba(11, 44, 128, 0.4);
+  z-index: -1;
+  transition: all 0.3s;
+}
+#resume .items .item .year {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+#resume .items .item .title {
+  margin-bottom: 16px;
+}
+#resume .items .item p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #B6B7BA;
+  max-width: 345px;
+}
+#resume .education {
+  padding-right: 34px;
+}
+#resume .experience {
+  padding-left: 34px;
+}
+
 #project {
   background: #f00;
 }
@@ -712,6 +823,9 @@ main > section header.has-bg img {
 @media (max-width: 1199px) {
   #about .languages-skills .languages-key-skills {
     padding-right: 12px;
+  }
+  #resume .experience {
+    margin-top: 100px;
   }
 }
 @media (max-width: 991px) {
@@ -784,5 +898,28 @@ main > section header.has-bg img {
   }
   #about .hero .info .buttons a:first-child {
     margin-bottom: 16px;
+  }
+  #resume .items .item {
+    position: relative;
+  }
+  #resume .items .item .icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -23px;
+    z-index: 2;
+    margin-top: 0;
+    background: rgba(30, 30, 32, 0.75);
+  }
+  #resume .items .item .icon:before {
+    display: none;
+  }
+  #resume .items .item .box:before {
+    display: none;
+  }
+  #resume .education,
+  #resume .experience {
+    padding-right: 12px;
+    padding-left: 12px;
   }
 }/*# sourceMappingURL=main.css.map */
