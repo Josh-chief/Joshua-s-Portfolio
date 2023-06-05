@@ -57,6 +57,7 @@
     header.custom{
         position: relative;
         text-align: center;
+        margin-bottom: 42px;
 
         &:before{
             content: "";
@@ -116,13 +117,14 @@
         .languages-key-skills{
             padding-right: 160px; 
             .languages{
+
                 .items{
+                    margin-bottom: 43px;	
+
                     .item{
                         display: flex;
                         align-items: center;
                         justify-content: space-between;
-                        margin-top: 38px;
-                        margin-bottom: 43px;	
 
                         
                         .info{
@@ -138,7 +140,6 @@
             }
             .key-skills{
                 .items{
-                    margin-top: 53px;
                    .item{
                     display: flex;
                     justify-content: space-between;
@@ -154,7 +155,6 @@
         }
         .web-skills {
             .items{
-                margin-top: 42px;
                 margin-left: -20px;
                 margin-right: -20px;
                 .item{
@@ -214,6 +214,21 @@
                 }
             }
             
-        } 
-}
+       } 
+
+    }
+    .certificates{
+        margin-top: 120px;
+        margin-bottom: 200px;
+
+        .items{
+            .item{
+                img{
+                    width: 100%;
+                   
+                }
+            }
+        }
+
+    }
 } 
