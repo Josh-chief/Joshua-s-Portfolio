@@ -106,6 +106,13 @@
                 background: $primary;
                 transform: rotate(50deg);
             }
+            &.fill{
+                &:before,
+                &:after{
+                    background: $primary;
+
+                }
+            }
         }
     }
 
