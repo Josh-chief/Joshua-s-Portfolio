@@ -1,0 +1,107 @@
+#testimonial{
+    background-image: url(../images/bg-shape.png);
+    background-repeat: no-repeat;
+    background-position: 60vw 374px;
+    min-height: 100vh;
+    .main-section{
+        .images{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 173px;
+            margin-bottom: 6px;
+
+            img{
+                width: 68px;
+                height: 68px;
+                margin-right: 16px;
+                margin-left: 16px;
+                opacity: 0.5;
+                border-radius: 50%;
+                cursor: pointer;
+                margin-bottom: 16px;
+                transition: all 0.3s;
+
+                &:hover{
+                    opacity: 1;
+                    filter: saturate(150%) sepia(0.5);
+                }
+
+                &.active{
+                    width: 90px;
+                    height: 90px;
+                    opacity: 1;
+                }
+            }
+
+        }
+
+        .comments{
+            text-align: center;
+            .item{
+                display: none;
+                
+                
+
+                &.active{
+                    display: inline-block;
+                }
+                .box{
+                    position: relative;
+                    background: rgba($secondary, 0.75);
+                    padding: 32px;
+                    border-radius: 8px;
+
+                    &:before{
+                        content:"";
+                        position: absolute;
+                        border-bottom: 9px solid rgba($secondary, 0.75);
+                        border-left: 9px solid transparent;
+                        border-right: 9px solid transparent;
+                        top: 9px;	
+                        left: 50px;
+                        transform: translateX(-50%);
+                    }
+                    
+                  p{
+
+                     font-family: 'Playfair Display', serif;
+                    font-size: 24px;
+                    font-weight: 700; 
+                    line-height: 42px;
+                    max-width: 710px;
+                    animation: scaleUp 1s;
+                    span{
+                        font-size: 86px;
+                        color: $primary;
+                        line-height: 0;
+                        vertical-align: -33px;
+                    }
+
+                  }   
+
+
+                }
+                .writer{
+                   margin-top: 32px;
+                   margin-bottom: 16px;
+                    span.field{
+                        color: $secondary_gray;
+                        
+                    }
+                }
+
+            }
+        }
+    }
+
+}
+@keyframes scaleUp{
+    0%{
+        transform: scale(0) rotate(20deg);
+    }
+    100%{
+        transform: scale(1) rotate(0deg);
+    }
+}

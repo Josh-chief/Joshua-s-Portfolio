@@ -68,13 +68,38 @@ workElements.forEach((item)=>{
     })
 })
 
-const projectModalElement = document.getElementById(' projectModal')
-myModalEl.addEventListener('show.bs.modal', event => {
-    document.getElementById('projectModal').classList.add('blur');
-    document.getElementById('sidebar').classList.add('blur');
+// const projectModalElement = document.getElementById(' projectModal')
+//     projectModal.addEventListener('show.bs.modal',function(event ) {
+//     document.getElementById('projectModal').classList.add('blur');
+//     document.getElementById('sidebar').classList.add('blur');
+// })
+
+// projectModalElement.addEventListener('hide.bs.modal', function (event) {
+//     document.getElementById('my_work').classList.remove('blur');
+//     document.getElementById('sidebar').classList.remove('blur');
+//  })
+
+
+
+
+
+
+
+
+
+
+
+let testimonialImages = document.querySelectorAll('#testimonial .images img');
+
+testimonialImages.forEach((item, index) => {
+    let position = index + 1;
+    
+    item.addEventListener('click', function() {
+        document.querySelector('#testimonial .images img.active').classList.remove('active')
+        document.querySelector(`#testimonial .images img:nth-child(${position})`).classList.add('active')
+
+        document.querySelector('#testimonial .comments .item.active').classList.remove('active')
+        document.querySelector(`#testimonial .comments .item:nth-child(${position})`).classList.add('active')
+    })
 })
 
-myModalEl.addEventListener('hide .bs.modal', event => {
-    document.getElementById('projectModal').remove('blur');
-    document.getElementById('sidebar').remove('blur');
-})
