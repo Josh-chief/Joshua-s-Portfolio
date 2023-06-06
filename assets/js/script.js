@@ -59,7 +59,7 @@ function projectFilter() {
 
 var projectModal = new bootstrap.Modal(document.getElementById('projectModal'))
 const workElements = document.querySelectorAll("#project .project-items .wrap");
-projectModal.show();
+
 workElements.forEach((item)=>{
     item.addEventListener('click', function(){
 

@@ -6,7 +6,7 @@
     .filters{
        text-align: center;
        margin-top: 81px;
-       margin-bottom: 71px;
+       margin-bottom: 55px;
         button{
             background: transparent;
             color: $secondary_gray;
@@ -16,8 +16,9 @@
             margin-left: 8px;
             &.active{
                 color: #fff;
-                background:$secondary;
+                background:$secondary; 
                 border-radius: 8px;
+                margin-bottom: 16px;
             }
         }
     }
