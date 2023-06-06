@@ -1,36 +1,57 @@
-@media (max-width: 1400px){
-    .container{
+@media (min-width: 1400px) {
+    .container {
         max-width: 1200px;
     }
-
 }
-@media (max-width: 1199px){
-    #about{
-        .languages-skills .languages-key-skills{
+
+@media (max-width: 1199px) {
+    #about {
+        .languages-skills .languages-key-skills {
             padding-right: 12px;
         }
     }
 
-    .modal#projectModal .modal-dialog .modal-content .modal-body .modal-close-button{
-        right: 10px;
-    }
-    #resume{
-        .experience{
+    #resume {
+        .experience {
             margin-top: 100px;
+        }
+    }
+
+    #contact {
+        .container {
+            .form {
+                padding-right: 12px;
+            }
+
+            .info {
+                padding-left: 12px;
+            }
         }
     }
 }
 
-@media (max-width: 991px){  
+@media (max-width: 991px) {
     #home {
-        .image{ 
+        .image {
             justify-content: flex-start;
             height: unset;
             margin-top: 40px;
             margin-bottom: 40px;
         }
     }
- 
+
+    .modal#projectModal .modal-dialog .modal-content .modal-body .modal-close-button {
+        right: 10px;
+        top: 10px;
+    }
+
+    #contact {
+        .container {
+            .info {
+                margin-top: 80px;
+            }
+        }
+    }
 }
 
 @media (max-width: 767px) {
@@ -64,60 +85,66 @@
                 }
             }
 
-            > span {
+            >span {
                 display: none;
             }
         }
     }
-    h1{
+
+    h1 {
         font-size: 36px;
     }
-    h2{
+
+    h2 {
         font-size: 20px;
     }
 
     main {
         padding-left: 0;
-       
-        > section header.has-bg img{
+
+        > section header.has-bg img {
             left: -13px;
             top: -4px;
-
         }
-        
-
     }
-    #home{
+
+    #home {
         background-image: unset;
-        .info{
+
+        .info {
             padding-top: 80px;
 
-        .socials{
-            margin-top: 70px;
-            ul{
-                justify-content: space-between;
+            .socials {
+                margin-top: 70px;
+
+                ul {
+                    justify-content: space-between;
+                }
             }
         }
-        }
     }
-    #about {
-        .hero .info .buttons{
-              flex-direction: column;
 
-              a{
+    #about {
+        .hero .info .buttons {
+            flex-direction: column;
+
+            a {
                 width: 100%;
                 text-align: center;
-                &:first-child{
+
+                &:first-child {
                     margin-bottom: 16px;
                 }
-              }
+            }
         }
     }
-    #resume{
-        .items{
-            .item{
+
+    #resume {
+        .items {
+            .item {
                 position: relative;
-                .icon{
+
+                .icon {
                     position: absolute;
                     top: 50%;
                     transform: translateY(-50%);
@@ -126,35 +153,59 @@
                     margin-top: 0;
                     background: rgba($secondary, 0.75);
 
-                    &:before{
+                    &:before {
                         display: none;
                     }
                 }
-                .box:before{
+
+                .box:before {
                     display: none;
                 }
             }
         }
+
         .education,
-        .experience{
+        .experience {
             padding-right: 12px;
             padding-left: 12px;
-
         }
     }
 
-    .modal#projectModal{
-        .modal-dialog .modal-content .modal-body{
-            img{
+    .modal#pojectModal {
+        .modal-dialog .modal-content .modal-body {
+            img {
                 height: unset;
             }
-            .left{
+
+            .left {
                 padding-right: 0;
             }
-            .right{
+
+            .right {
                 padding-left: 0;
                 padding-top: 32px;
             }
         }
     }
-}   
+
+    #contact {
+        .container {
+            .info {
+                .item {
+                    flex-direction: column;
+                    text-align: center;
+                    margin-bottom: 32px;
+
+                    i {
+                        margin-right: 0;
+                        margin-bottom: 8px;
+                    }
+
+                    br {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

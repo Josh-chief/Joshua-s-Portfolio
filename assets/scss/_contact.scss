@@ -1,3 +1,113 @@
-#contacts{
-    background: #000;
+#contact{
+    background-image: url(../images/bg-shape.png);
+    background-repeat: no-repeat;
+    background-position: 53vw 574px;
+    min-height: 100vh;
+
+    .container {
+        margin-top: 123px;
+
+        .form {
+            padding-right: 69px;
+
+            .form-item {
+                position: relative;
+                margin-bottom: 32px;
+
+                &.focus {
+                    label {
+                        top: -3px;
+                        font-size: 12px;
+                    }
+
+                    &:after {
+                        width: 100%;
+                    }
+                }
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    height: 2px;
+                    width: 100%;
+                    background: $secondary_gray;
+                    bottom: 0;
+                    left: 0;
+                }
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    height: 2px;
+                    width: 0;
+                    background: #fff;
+                    bottom: 0;
+                    left: 0;
+                    transition:all 0.3s;
+                }
+
+                label {
+                    position: absolute;
+                    top: 17px;
+                    color: $secondary_gray;
+                    transition:all 0.3s;
+                }
+
+                input,
+                textarea {
+                    width: 100%;
+                    background: transparent;
+                    outline: none;
+                    border: none;
+                    padding: 16px 0;
+                }
+
+                textarea {
+                    resize: none;
+                    min-height: 171px;
+                }
+            }
+        }
+
+        .info {
+            padding-left: 69px;
+
+            .item {
+                display: flex;
+                margin-bottom: 32px;
+
+                &:hover {
+                    i {
+                        background: $primary;
+                    }
+                }
+
+                i {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-shrink: 0;
+                    width: 46px;
+                    height: 46px;
+                    background: rgba(#ffffff, 0.05);
+                    border-radius: 50%;
+                    font-size: 18px;
+                    margin-right: 16px;
+                    transition: all 0.3s;
+                }
+
+                .text {
+                    .title {
+                        color: $gray;
+                    }
+
+                    a {
+                        display: block;
+                        color: #fff;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
 }

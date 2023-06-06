@@ -103,3 +103,17 @@ testimonialImages.forEach((item, index) => {
     })
 })
 
+
+let contactFromItems = document.querySelectorAll('#contact .form input, #contact .form textarea');
+
+contactFromItems.forEach((item) => {
+    item.addEventListener('focus', function () {
+        item.parentElement.classList.add('focus')
+    })
+
+    item.addEventListener('blur', function () {
+        if (!item.value) {
+            item.parentElement.classList.remove('focus')
+        }
+    })
+})
