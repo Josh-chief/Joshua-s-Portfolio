@@ -59,11 +59,22 @@ function projectFilter() {
 
 var projectModal = new bootstrap.Modal(document.getElementById('projectModal'))
 const workElements = document.querySelectorAll("#project .project-items .wrap");
-projectModal .show();
+projectModal.show();
 workElements.forEach((item)=>{
     item.addEventListener('click', function(){
 
         projectModal.show();
 
     })
+})
+
+const projectModalElement = document.getElementById(' projectModal')
+myModalEl.addEventListener('show.bs.modal', event => {
+    document.getElementById('projectModal').classList.add('blur');
+    document.getElementById('sidebar').classList.add('blur');
+})
+
+myModalEl.addEventListener('hide .bs.modal', event => {
+    document.getElementById('projectModal').remove('blur');
+    document.getElementById('sidebar').remove('blur');
 })

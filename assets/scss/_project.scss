@@ -1,21 +1,162 @@
 #project{
+
+    &.blur{
+        filter: blur(2px);
+    }
     .filters{
+       text-align: center;
+       margin-top: 81px;
+       margin-bottom: 71px;
         button{
-            background: #000;
-            margin-right: 32px;
-            margin-top: 32px;
-            margin-bottom: 32px;
+            background: transparent;
+            color: $secondary_gray;
+            border: none;
+            padding: 8px 16px;
+            margin-right: 8px;
+            margin-left: 8px;
+            &.active{
+                color: #fff;
+                background:$secondary;
+                border-radius: 8px;
+            }
         }
     }
     .project-items{
         .item{
+            margin-bottom: 24px;
+           
             .wrap{
+                position: relative;
+                overflow: hidden;
+
+                &:hover{
+                    &:before{
+                        transform: rotate(0deg);
+                    }
+                    &:after{
+                        transform: translate(-50%, -50% )rotate(0deg);
+                    }
+                }
+
+                &:before{
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba($primary, 0.6);
+                    border-radius: 8px;
+                    z-index: 1; 
+                    cursor: pointer;
+                    transform: rotate(-100deg);
+                    transform-origin: top left;
+                    transition: all 0.3s;
+
+
+
+                }
+                &:after{
+                    content: " View ";
+                    position: absolute;
+                    width: 96%;
+                    height: 95%;
+                    background: rgba($dark_bg, 0.8);
+                    border-radius: 8px;
+                    transform-origin: bottom left;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50% )rotate(-100deg);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 24px;
+                    letter-spacing: 3px;
+                    z-index: 2;
+                    cursor: pointer;
+                    transition: all 0.3s;
+
+                    
+                }
+            
                 img{
                     width: 100%;
+                    opacity: 0.5;
+                    border-radius: 8px;
+                    cursor:pointer;
                 }
             }
         }
     }
+
+    
 }
     
-    
+.modal#projectModal{
+    .modal-dialog{
+        max-width: 863px;
+        .modal-content{
+            background: $secondary;
+            padding: 32px;
+            .modal-body{
+                padding: 0;
+                position: static;
+            .modal-close-button{
+                background: $dark_bg;
+                font-size: 22px;
+                width: 46px;
+                height: 46px;
+                border-radius: 50%;
+                border: none;
+                transition: all 0.3s;
+
+                &:hover{
+                    background: darken($primary, 40%);
+                }
+            }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 8px;
+                }
+                .left{
+                    padding: 0;
+                    padding-right: 32px;
+                    h2{
+                    margin-top: 32px;
+                    margin-bottom: 16px;
+                    }
+                    P{
+                        color: $gray;
+                    }
+                    
+                }
+                .right{
+                    padding-right: 0;  
+                    padding-left: 32px;
+                    padding-top: 80px;
+
+                    i{
+                        font-size: 18px;
+                        margin-right: 2px;
+                    }
+                    .value{
+                        color: $gray;
+                    }
+                    .project-link{
+                        margin-top: 32px;
+                    }
+                    a,
+                    i{
+                        color: $primary;
+                        text-decoration: none;
+                    }
+                    a:hover{
+                        text-decoration: underline;
+                    }
+                  }
+
+            }
+        }
+    }
+}  
+
